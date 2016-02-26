@@ -1,0 +1,16 @@
+{
+  "name": "new-ext",
+  "version": "1.0.0",
+  "description": "",
+  "main": "code.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gsap": "^1.18.2",
+    "jquery": "^2.2.1",
+    "underscore": "^1.8.3"
+  }
+}
