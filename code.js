@@ -13753,47 +13753,66 @@ for(var j = 0; j < 6; j++) {
 url = urls[Math.floor(Math.random()*urls.length)];
 console.log(url);
 
-document.write('<div class="header__container"><div class="header__section header__section--left"><a class="header__link" href><h1 class="header__content header__logo">Discover Studios</h1></a><h1 class="header__content studio-index">Powered by <a class="header__link" href="http://studio-index.co/"><span class="header__content__company">Index-Studio</span></a></h1></div><div class="header__binoculars"><?xml version="1.0" encoding="utf-8"?><!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version="1.1" class="header__binoculars--icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 266.5 154" style="enable-background:new 0 0 266.5  154;" xml:space="preserve"><style type="text/css">.st0{fill:#FFFFFF;}</style><path d="M122.5,14.6c7.2-4.1,14.3-3.9,21.4-0.1c0.9-1.7,1.7-3.5,2.7-5.1c7.6-11.4,23.3-12.7,33.4-2.8c3.3,3.3,6.5,6.7,9.8,9.9c0.8,0.7,1.9,1.3,3,1.5c11.6,1.5,22.1,5.3,31.1,12.9c7,5.9,13.9,11.9,21,17.8c6.3,5.2,11.4,11.4,15.1,18.7c18.3,35.8-3.3,78.5-42.3,85.6c-33.7,6.1-64.9-17.6-69.4-50.4c0-0.1-0.1-0.3-0.2-0.4c-10.6,4.6-17.6,5.1-29.6,0c-1.8,13-7.1,24.4-16.4,33.7c-13.5,13.6-29.9,19.5-49.1,17.7C28.6,151.2,7,133,1.6,108.2c-5-23.2,1.5-42.9,19.3-58.7C28.4,42.8,36.2,36.3,44,30c7.9-6.5,17.2-10,27.2-11.4c2.7-0.4,5-1.1,6.9-3.3c3-3.4,6.3-6.7,9.7-9.7c11.2-9.8,27.6-6.3,33.8,7.2C121.9,13.3,122.1,13.9,122.5,14.6z M59.4,135.1c22.4,0,40.5-17.9,40.6-40.1c0.1-22.6-18.2-41.1-40.6-41C37,54.1,18.8,72.3,18.8,94.8C18.8,117,37,135.1,59.4,135.1z M207,135.1c22.3,0.1,40.6-18,40.7-40c0.1-22.5-17.9-41-40-41c-22.8-0.1-41.3,18.1-41.2,40.6C166.6,117,184.5,135,207,135.1z M133.3,59.9c-9.1,0-16.1,7-16.2,16.1c0,8.8,7.2,16.1,16,16.1c8.9,0,16.1-7.1,16.2-15.9C149.4,67.1,142.4,60,133.3,59.9z"/><path class="lefteye" class="st0" d="M59.4,135.1c-22.4,0-40.6-18.1-40.6-40.3C18.8,72.3,37,54.1,59.4,54C81.8,54,100.1,72.4,100,95C99.9,117.2,81.8,135.1,59.4,135.1z"/><path class="righteye" d="M207,135.1c-22.4-0.1-40.4-18.1-40.5-40.5c-0.1-22.5,18.4-40.7,41.2-40.6c22.1,0.1,40.1,18.6,40,41C247.6,117.1,229.2,135.2,207,135.1z"/><path class="st0" d="M133.3,59.9c9.1,0,16.1,7.2,16,16.2C149.2,85,142,92,133.1,92c-8.8,0-16-7.2-16-16.1C117.2,66.9,124.3,59.9,133.3,59.9z"/><circle class="leftpupil" cx="58.7" cy="107.3" r="18.6"/><circle class="rightpupil" cx="205.8" cy="107.3" r="18.6"/></svg></div><div class="header__section header__section--right"><h1 class="header__content useallfive">Extension by <a class="header__link" href="http://www.useallfive.com/"><span class="header__content__company">Use All Five</span></a></h1><a class="header__link" href="#"><h1 class="header__content header__link header__close">Close</h1></a></div></div><iframe class="frame__container" src="http://www.' + url + '" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:40px;left:0px;right:0px;bottom:0px" height="100%" width="100%"></iframe>');
+document.write('<div class="header__container"><div class="header__section header__section--left"><a class="header__link" href><h1 class="header__content header__logo">Discover Studios</h1></a><h1 class="header__content studio-index">Powered by <a class="header__link" href="http://studio-index.co/"><span class="header__content__company">Index-Studio</span></a></h1></div><div class="header__binoculars"><img class="" src="images/binoculars.png"><div id="monstereyes"></div></div></div><div class="header__section header__section--right"><h1 class="header__content useallfive">Extension by <a class="header__link" href="http://www.useallfive.com/"><span class="header__content__company">Use All Five</span></a></h1><a class="header__link" href="#"><h1 class="header__content header__link header__close">Close</h1></a></div></div><iframe class="frame__container" src="http://www.' + url + '" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:40px;left:0px;right:0px;bottom:0px" height="100%" width="100%"></iframe>');
 document.location.hash = url;
 
 $('.header__close').click(function(){
    $(this).closest(".header__container").remove();
-   $('.frame__container').css('top', '0px');
+   $('.frame__container').animate({top: 0}, 1000, function(){});
 });
 
-var Circle = function(container, follower, r){
-    var center = {
-        x: $(container).width()/2 - r, 
-        y: $(container).height()/2 - r
+var DrawEye = function(eyecontainer, pupil, eyeposx, eyeposy, eyer){
+  $("#monstereyes").append("<div id='" + eyecontainer + "'><div id='" + pupil + "'></div></div>")
+  
+  eyecontainer = "#" + eyecontainer;
+  pupil = "#" + pupil;
+  
+  $(eyecontainer).css({left:eyeposx, top:eyeposy});
+  $(pupil).css({width:eyer*0.4,height:eyer*0.4});
+  $(eyecontainer).css({width:eyer,height:eyer});
+  $(pupil).css({position: 'relative', background: '#000000', 'border-radius':'50%'});
+  $(eyecontainer).css({position:'absolute', background:'#FFFFFF', overflow:'hidden', 'border-radius': '50%'});
+  
+  // Initialise core variables
+  var r = $(pupil).width()/2;
+  var center = {
+    x: $(eyecontainer).width()/2 - r, 
+    y: $(eyecontainer).height()/2 - r
+  };
+  var distanceThreshold = $(eyecontainer).width()/2 - r;
+  var mouseX = center.x, mouseY = center.y;
+  
+  // Listen for mouse movement
+  $(window).mousemove(function(e){ 
+    var d = {
+      x: e.pageX - r - eyeposx - center.x,
+      y: e.pageY - r - eyeposy - center.y
     };
-    var distanceThreshold = $(container).width()/2 - r;
-    var mouseX = 0, mouseY = 0;
-
-    $(window).mousemove(function(e){ 
-        var d = {
-            x: e.pageX - center.x,
-            y: e.pageY - center.y
-        };
-        var distance = Math.sqrt(d.x*d.x + d.y*d.y);
-        if (distance < distanceThreshold) {
-            mouseX = e.pageX;
-            mouseY = e.pageY;
-        } else {
-            mouseX = d.x / distance * distanceThreshold + center.x;
-            mouseY = d.y / distance * distanceThreshold + center.y;
-        }
-    });
-
-    // cache the selector
-    var follower = $(follower);
-    var xp = 0, yp = 0;
-    var loop = setInterval(function(){
-        // change 12 to alter damping higher is slower
-        xp += (mouseX - xp);
-        yp += (mouseY - yp);
-        // follower.attr({cx:xp, cy:yp});
-    }, 30);
+    var distance = Math.sqrt(d.x*d.x + d.y*d.y);
+    if (distance < distanceThreshold) {
+      mouseX = e.pageX - eyeposx - r;
+      mouseY = e.pageY - eyeposy - r;
+    } else {
+      mouseX = d.x / distance * distanceThreshold + center.x;
+      mouseY = d.y / distance * distanceThreshold + center.y;
+    }
+  });
+  
+  // Update pupil location
+  var pupil = $(pupil);
+  var xp = center.x, yp = center.y;
+  var loop = setInterval(function(){
+    // change 1 to alter damping/momentum - higher is slower
+    xp += (mouseX - xp) / 1;
+    yp += (mouseY - yp) / 1;
+    pupil.css({left:xp, top:yp});    
+  }, 1);
 };
 
-var c1 = new Circle(".lefteye", ".leftpupil", 1);
-var c2 = new Circle(".righteye", ".rightpupil", 1);
+// console.log($(window).width() / 2);
+var eye = new DrawEye("eye1", "pupil1", 2, 17, 13);
+var eye = new DrawEye("eye2", "pupil2", 25, 17, 13);
+
+
+// var eye = new DrawEye("eye1", "pupil1", 4, 18, 10);
+// var eye = new DrawEye("eye2", "pupil2", 27, 18, 10);

@@ -1,12 +1,18 @@
+@font-face { font-family: HarmoniaSansReg; src: url('fonts/HarmoniaSansStd-Regular.otf'); }
+@font-face { font-family: HarmoniaSansSemiBld; src: url('fonts/HarmoniaSansStd-SemiBd.otf'); }
 body {
   margin: 0px;
   overflow: hidden;
   padding: 0px;
 }
 
+h1 {
+  font-family: HarmoniaSansReg;
+}
+
 .header__container {
   background-color: #0cf6b1;
-  height: 40px;
+  height: 1400px;
   position:absolute;
   width: 100%;
 }
@@ -14,7 +20,7 @@ body {
 .header__content {
   display: inline-block;
   font-size: 14px;
-  margin-top: 12px;
+  margin-top: 14px;
 }
 
 .header__section--left {
@@ -29,11 +35,16 @@ body {
 }
 
 .header__link {
+  transition: color 0.3s ease;
   color: #000;
 }
 
 .header__link:hover {
   color: #fff;
+}
+
+.header__logo {
+  font-family: HarmoniaSansSemiBld;
 }
 
 .studio-index {
@@ -44,9 +55,6 @@ body {
 .useallfive {
   font-weight: 200;
   margin-right:70px;
-}
-
-.header__close {
 }
 
 .header__content__company {
@@ -60,13 +68,14 @@ body {
   position: absolute;
   right: 0px;
   top: 40px;
-  width: 100%; 
+  width: 100%;
 }
 
 .header__binoculars {
   margin: 0 auto;
   width: 40px;
   padding-top: 9px;
+  position: relative;
 }
 
 .lefteye {
