@@ -13813,6 +13813,8 @@ var DrawEye = function(eyecontainer, pupil, eyeposx, eyeposy, eyer){
 var eye = new DrawEye("eye1", "pupil1", 2, 17, 13);
 var eye = new DrawEye("eye2", "pupil2", 25, 17, 13);
 
+var colors = ['#c7f1f3', '#d9978d', '#ffd264', '#4bcebd', '#b3aad8'];
 
-// var eye = new DrawEye("eye1", "pupil1", 4, 18, 10);
-// var eye = new DrawEye("eye2", "pupil2", 27, 18, 10);
+$('.header__container').on("click", function() {
+    $(this).css({background:colors[Math.floor(Math.random() * colors.length)]});
+})
