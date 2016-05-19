@@ -12,7 +12,7 @@ h1 {
 
 .header__container {
   background-color: #0cf6b1;
-  height: 1400px;
+  height: 40px;
   position:absolute;
   width: 100%;
   transition: all 1s ease-in;
@@ -77,6 +77,7 @@ h1 {
   width: 40px;
   padding-top: 9px;
   position: relative;
+  z-index: 2;
 }
 
 .lefteye {
@@ -102,3 +103,5 @@ h1 {
   position: relative;
   width: 5px;  
 }
+
+
