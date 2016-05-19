@@ -54,3 +54,11 @@ var DrawEye = function(eyecontainer, pupil, eyeposx, eyeposy, eyer){
 // console.log($(window).width() / 2);
 var eye = new DrawEye("eye1", "pupil1", 2, 17, 13 );
 var eye = new DrawEye("eye2", "pupil2", 25, 17, 13);
+
+// setInterval(function() {
+//   $('iframe').contents().find('html').on('mousemove', function (e) { 
+//       var x = e.clientX ; 
+//       var y = e.clientY ;
+//       console.log(x + " " + y);
+//   })
+// }, 300);
