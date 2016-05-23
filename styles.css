@@ -1,65 +1,154 @@
 @font-face { font-family: HarmoniaSansReg; src: url('fonts/HarmoniaSansStd-Regular.otf'); }
 @font-face { font-family: HarmoniaSansSemiBld; src: url('fonts/HarmoniaSansStd-SemiBd.otf'); }
+
 body {
-  margin: 0px;
+  margin: 0;
   overflow: hidden;
-  padding: 0px;
+  padding: 0;
+  /*background: #0cf6b1 url("discoverstudios-128px.png") center;*/
+}
+
+a {
+  text-decoration: none;
 }
 
 h1 {
   font-family: HarmoniaSansReg;
 }
 
-.header__container {
-  background-color: #0cf6b1;
-  height: 40px;
-  position:absolute;
-  width: 100%;
-  transition: all 1s ease-in;
+.header__link {
+  display: inline-block;
+  transition: all 0.3s ease;
+  color: #000;
+  border-bottom: 1px solid black;
 }
 
-.header__content {
+.header__link:hover {
+  color: #fff;
+  border-bottom: 1px solid white;
+}
+
+.header__link--no-line {
+  border-bottom: none; 
+}
+
+.header__link--no-line:hover {
+  border-bottom: none;  
+}
+
+#header__container {
+  background-color: #0cf6b1;
+  height: 35px;
+  position: absolute;
+  top: 0;
+  transition: height 1s ease-in;
+  width: 100%;
+  z-index: 2;
+}
+
+.header__section {
+    z-index: 2;
+}
+
+.header__info {
+  background-color: #0cf6b1;
+  height: 120px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+  top: -87px;
+}
+
+.header__info-button {
   display: inline-block;
-  font-size: 14px;
-  margin-top: 14px;
+  position: relative;
+  top: 2px;
+  margin-right: 10px;
+  transition: opacity .3s ease-in;
+}
+
+.header__info-button:hover {
+  opacity: 0.5;
+}
+
+.header__useallfive {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  margin-top: 31px;
+  text-transform: uppercase;
+  transition: border 1s ease-in;
+}
+
+.header__useallfive__name {
+  border-bottom: 1px solid #000;
+}
+
+.header__useallfive__name:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.header__index-studio {
+  letter-spacing: 0.18em;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.header__sharing {
+  letter-spacing: 0.18em;
+  font-size: 12px;
+  font-style: italic;
+  text-transform: uppercase;
 }
 
 .header__section--left {
-  float:left;
-  padding-left: 20px;
+  display: inline-block;
+  position: absolute;
+  left: 20px;
 }
 
 .header__section--right {
   position: absolute;
   right: 20px;
-  top: 0;
-}
-
-.header__link {
-  transition: color 0.3s ease;
-  color: #000;
-}
-
-.header__link:hover {
-  color: #fff;
+  top: -2px;
 }
 
 .header__logo {
+  display: inline-block;
   font-family: HarmoniaSansSemiBld;
+  font-size: 15px;
 }
 
-.studio-index {
+.header__studio-name {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  left: 25%;
+  margin-top: 15px;  
+  position: relative;
+  text-transform: uppercase;
+}
+
+.header__studio-location {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  right: 25%;
+  margin-top: 15px;  
+  position: relative;
+  text-transform: uppercase;
+}
+
+.header__close {
+  display: inline-block;
+  font-size: 11px;
   font-weight: 200;
-  margin-left:70px;
-}
-
-.useallfive {
-  font-weight: 200;
-  margin-right:70px;
-}
-
-.header__content__company {
-  text-decoration: underline;
+  letter-spacing: 0.18em;
+  margin-top: 15px;  
+  position: relative;
+  text-transform: uppercase;
 }
 
 .iframe__site {
@@ -68,16 +157,17 @@ h1 {
   left: 0px;
   position: absolute;
   right: 0px;
-  top: 40px;
+  top: 280px;
   width: 100%;
 }
 
 .header__binoculars {
-  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -20px;
+  margin-top: -12px;
   width: 40px;
-  padding-top: 9px;
-  position: relative;
-  z-index: 2;
 }
 
 .lefteye {
@@ -104,4 +194,17 @@ h1 {
   width: 5px;  
 }
 
+#loading {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0cf6b1;
+  background-image: url('discoverstudios-128px.png');
+  background-repeat: no-repeat;
+  background-position: center;  
+}
 

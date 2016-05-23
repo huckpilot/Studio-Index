@@ -1,16 +1,17 @@
 // http://stackoverflow.com/questions/7950184/is-there-a-client-side-way-to-detect-x-frame-options
-var urlList, urls, url;
+var studioList, urls, url;
 
 // Pulls studios from json
-urlList = _.pluck(json, 'studios');
+studioList = _.pluck(json, 'studios');
 // Empty array to put plucked urls inside
 urls = [];
 
-// Pull url strings from urlList and push to urls array
+
+// Pull url strings from studioList and push to urls array
 for(var j = 0; j < 6; j++) {
-  for (var i = 0; i < urlList[j].length; i++) {
-    urls.push(urlList[j][i].url);
-  }  
+  for (var i = 0; i < studioList[j].length; i++) {
+    urls.push([studioList[j][i].country, studioList[j][i].city, studioList[j][i].url]);
+  } 
 }
 
 // shuffle function, pulls random url from urls array
@@ -32,9 +33,44 @@ function shuffle(array) {
 shuffle(urls);
 
 // Create iframe and place shuffle results inside
-document.write('<div class="header__container"><div class="header__section header__section--left"><a class="header__link" href=http://www.' + urls[0] + ' target="_parent"><h1 class="header__content header__logo">' + urls[0] + '</h1></a><h1 class="header__content studio-index">Powered by <a class="header__link" href="http://studio-index.co/"><span class="header__content__company">Index-Studio</span></a></h1></div><div class="header__binoculars"><img class="" src="images/binoculars.png"><div id="monstereyes"></div></div></div><div class="header__section header__section--right"><h1 class="header__content useallfive">Extension by <a class="header__link" href="http://www.useallfive.com/"><span class="header__content__company">Use All Five</span></a></h1><a class="header__link" href="#"><h1 class="header__content header__link header__close">Close</h1></a></div></div><iframe class="frame__container" src="http://www.' + urls[0] + '" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:40px;left:0px;right:0px;bottom:0px;" height="100%" width="100%"></iframe>');
+document.write('<div id="header__container"> <div class="header__section header__section--left"> <a class="header__info__link" href="#"> <div class="header__info-button"> <img class=""src="images/info_item.png"> </div></a> <a class="header__link header__link--no-line" href> <h1 class="header__logo"> Discover Studios </h1> </a> <a class="header__link header__link--no-line" href=http://www.' + urls[0][2] + ' target="_parent"> <h1 class="header__studio-name"> ' + urls[0][2] + ' </h1> </a> </div><div class="header__section header__binoculars"> <img class="binoculars" src="images/binoculars.png"> <div id="monstereyes"> </div></div><div class="header__section header__section--right"> <h1 class="header__studio-location"> ' + urls[0][0] + ' + ' + urls[0][1] + ' </h1> <a class="header__link header__link--no-line" href="#"> <h1 class="header__link header__close header__link--no-line"> Close </h1> </a> </div></div><div class="header__info"> <h1 class="header__useallfive"> Extension designed and developed by <a class="header__link header__useallfive__name" href="http://www.useallfive.com" target="_parent">Use All Five</a></h1> <h1 class="header__index-studio"> powered by <a class="header__link" href="http://www.studio-index.co" target="_parent"> <span class="header__index-studio__name"> Index Studio </span> </a> database </h1><h1 class="header__sharing">Sharing is caring</h1></div><iframe class="frame__container" src="http://www.' + urls[0][2] + '" frameborder="0" style="overflow:hidden;overflow-x:hidden;overflow-y:hidden;height:100%;width:100%;position:absolute;top:35px;left:0px;right:0px;bottom:0px;" height="100%" width="100%"></iframe>');
 
-// So so way of changing address string. Works sort of, but it's not pretty
-// var stateObj = { 'chrome-extension://khkebpmofeknddcgpingdmcnfdlhkind/Discover%20Studio%20Extension': urls[0] };
-// history.pushState(stateObj, "page 2", urls[0]);
+$('.header__close').click(function(){
+   // $(this).closest(".header__container").remove();
+   $('.frame__container').animate({top: 0}, 250, function(){});
+   $('.header__container').animate({top: -35}, 250, function(){});
+   $('.header__info').animate({top: -120}, 250, function(){});
+});
 
+var open;
+open = false;
+
+$('.header__info__link').click(function(){
+  if (!open) {
+    $('.header__info').animate({top: 35}, 250, function(){});
+    open = true;
+  } else {
+    $('.header__info').animate({top: -87}, 250, function(){});
+    open = false;
+  }
+});
+
+function onReady(callback) {
+    var intervalID = window.setInterval(checkReady, 1000);
+
+    function checkReady() {
+        if (document.getElementsByTagName('iframe')[0] !== undefined) {
+            window.clearInterval(intervalID);
+            callback.call(this);
+        }
+    }
+}
+
+function show(id, value) {
+    document.getElementById(id).style.display = value ? 'block' : 'none';
+}
+
+onReady(function () {
+    show('header__container', true);
+    show('loading', false);
+});
